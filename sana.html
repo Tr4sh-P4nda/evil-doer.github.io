@@ -257,11 +257,11 @@ function main(){
 		second.rotation.z = 2* -Math.PI*now.getSeconds()/60;
 		minute.rotation.z = 2* -Math.PI*(now.getMinutes()+now.getSeconds()/60)/60;
 		hour.rotation.z = 2* -Math.PI*(now.getHours()*60+now.getMinutes())/720;
-		//molecule.rotation.x += 0.005;
-		//molecule.rotation.y += 0.005;
-		//molecule.rotation.z += 0.005;
-		//sana.position.y = 5.776+0.12*Math.cos(angle -= .02);
-		//sky.rotation.y += 0.0005;
+		molecule.rotation.x += 0.005;
+		molecule.rotation.y += 0.005;
+		molecule.rotation.z += 0.005;
+		sana.position.y = 5.776+0.12*Math.cos(angle -= .02);
+		sky.rotation.y += 0.0005;
 		if(Date.now() > (timer + 4050)){
 			skull.position.set(5.3071, -1000, -8.99);
 		};
