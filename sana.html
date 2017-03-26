@@ -174,7 +174,7 @@ function main(){
 		};
 	
 		//sky sphere
-		UltimateLoader.load('images/sana/SanaBG.jpg', function(texture){
+		UltimateLoader.load('images/sana/1SanaBG.jpg', function(texture){
 			var geometry = new THREE.SphereGeometry(735, 36, 36);
 			var material = new THREE.MeshBasicMaterial({ map: texture, side: THREE.BackSide});
 			sky = new THREE.Mesh(geometry, material);
@@ -192,7 +192,7 @@ function main(){
 		
 		//jpeg filename	wd.	ht.	mov x   mov y	mov z	deg (scene pos)
 		
-		DrawPic("eyes", 2.27, 0.76, 1.5671, 4.706, 2.66 , -90);
+		/*DrawPic("eyes", 2.27, 0.76, 1.5671, 4.706, 2.66 , -90);
 		DrawPic("LunBobby", 4.27, 2.77, -5.9429 , 4.036 , -11.27, -90);
 		DrawPic("Time", 2.576, 2.993, 6.3011 , 3.825 , -11.88, 90);
 		DrawPic("TimeTravel", 5.71, 2.70, -3.4429 , 3.116 , 10.89 , 180);
@@ -208,7 +208,7 @@ function main(){
 		DrawPic("lostintime", 5.07, 3.11, 8.9071 , 3.872 , 6.723, -90);
 		DrawPic("twins", 1.19, 0.67, 8.8971 , 2.966 , 8.27, -90);
 		DrawPic("evilchest", 1.994, 3.08, 12.68013, 3.78407, 1.82568, 180);
-		DrawPic("collage", 3.712, 2.969, 10.8665 , 3.82809 , -10.25244, -90);
+		DrawPic("collage", 3.712, 2.969, 10.8665 , 3.82809 , -10.25244, -90);*/
 	
 		animate();
 	});
@@ -236,7 +236,7 @@ function main(){
 		skull.lookAt(headTrack.position);
 
 		var TimeZoneVal = new Date().toLocaleString('en-US', {
-			timeZone: 'Asia/Kuwait'
+			timeZone: 'US/Central'
 		});
 		
 		now = new Date(TimeZoneVal);
@@ -256,5 +256,5 @@ function main(){
 	};
 };
 </script>
-<a id="linkToRoom" href="altspace://account.altvr.com/api/spaces/lost-in-time"></a>
+<!--a id="linkToRoom" href="altspace://account.altvr.com/api/spaces/lost-in-time"></a-->
 </body></html>
