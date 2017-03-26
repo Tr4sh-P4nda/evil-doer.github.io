@@ -56,11 +56,11 @@ function main(){
 		grass.position.set(2.4071, 1.646, -6.22);
 		grass.rotation.y = THREE.Math.degToRad(15)
 		
-		/*scene.add(skull = obj[2]);
+		scene.add(skull = obj[2]);
 		skull.scale.set(0.5, 0.5, 0.5);
 		skull.position.set(5.3071, -1000, -8.99);
 		scream = new NativeComponent('n-sound', {src: "sounds/PsychoScream.ogg", volume: 1, minDistance: 3}).addTo(skull);
-		*/
+		
 		scene.add(parlor = obj[17]);
 		parlor.position.y = -1000;
 		parlor.traverse(function(child){
@@ -72,7 +72,7 @@ function main(){
 		snow.traverse(function(child){
 			child.userData.altspace = {collider:{enabled: false}};
 		});
-		/*
+		
 		scene.add(molecule = obj[4]);
 		molecule.scale.multiplyScalar(2.35);
 		molecule.position.set(-5.6829, 5.776, -1.32);
@@ -109,14 +109,14 @@ function main(){
 		curvewall.traverse(function(child){
 			child.userData.altspace = {collider:{enabled: false}};
 		});
-		*/
+		
 		scene.traverse(function(child){ //fix for ultimateloader loading double sided textures by default
 			if(child instanceof THREE.Mesh){
 				child.material.side = 0;
 			};
 		});
 
-		/*UltimateLoader.load("images/sana/swirl.png", function(texture){
+		UltimateLoader.load("images/sana/swirl.png", function(texture){
 			var geometry = new THREE.PlaneGeometry(0.2, 0.2);
 			var material = new THREE.MeshBasicMaterial({map: texture, transparent: true, opacity: 0.1, side: THREE.DoubleSide});
 			swirl = new THREE.Mesh(geometry, material);
@@ -172,7 +172,7 @@ function main(){
 				return;
 			};
 		};
-		*/
+		
 		//sky sphere
 		UltimateLoader.load('images/sana/1SanaBG.jpg', function(texture){
 			var geometry = new THREE.SphereGeometry(735, 36, 36);
@@ -214,7 +214,7 @@ function main(){
 	});
 	
 	//draw wall pictures
-	/*function DrawPic(file, wd, ht, movX, movY, movZ, deg){
+	function DrawPic(file, wd, ht, movX, movY, movZ, deg){
 		UltimateLoader.load("images/sana/" + file + ".jpg", function(texture){
 			var geometry = new THREE.PlaneGeometry(wd, ht);
 			var material = new THREE.MeshBasicMaterial({ map: texture });
@@ -230,7 +230,7 @@ function main(){
 		scream.call("play");
 		timer = Date.now();
 	};
-	*/
+	
 	function animate(){
 
 		skull.lookAt(headTrack.position);
